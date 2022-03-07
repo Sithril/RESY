@@ -3,8 +3,7 @@ package sk.resy;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
 
@@ -44,8 +43,8 @@ public class ResyApplication {
         List<Integer> res = numbers // 1, 5, 2
                 .stream()
                 .map(a -> a * 11) // vsetky sa vynasobia 10-tkou -> 11, 66, 22
-                .filter(a -> a % 2 == 0)
-              .filter(ResyApplication::filterEven)
+                .filter(a -> a % 2 == 0) // lambda - anonymna funkcia?
+              .filter(ResyApplication::filterEven) // method handle
                 .toList();
 
         List<Integer> res2 = new ArrayList<>();

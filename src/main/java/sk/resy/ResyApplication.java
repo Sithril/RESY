@@ -77,6 +77,8 @@ public class ResyApplication {
 }
 
 
+// functional inteface ja taky, ktory ma presne jednu a iba jednu abstraktnu metodu
+
 // @FunctionalInterface
 // public interface Foo {
 //     String method();

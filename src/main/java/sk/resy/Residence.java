@@ -1,11 +1,11 @@
 package sk.resy;
 
 public interface Residence {
+    // implicitne vsetko je public
+    int x = 10;
 
-    default int getSize() {
-        return 100;
-    }
-    default int getValue() {
+    int getSize();
+    default int getValue() { // "default" iba pre interface
         return 10;
     }
 
@@ -15,6 +15,11 @@ public interface Residence {
                 return x;
             }
         };
+    }
+
+
+    private int add(int a ) { // private IBA metody, nie policka
+        return a + 1;
     }
 
 
